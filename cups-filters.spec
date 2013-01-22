@@ -1,7 +1,7 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
 Version:	1.0.29
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
@@ -105,6 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_prefix}/lib/cups/filter/texttops
 %attr(755,root,root) %{_prefix}/lib/cups/filter/urftopdf
 
+%dir %{_datadir}/cups/banners
 %{_datadir}/cups/banners/classified
 %{_datadir}/cups/banners/confidential
 %{_datadir}/cups/banners/secret
