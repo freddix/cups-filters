@@ -1,11 +1,12 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
 Version:	1.0.29
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
 # Source0-md5:	0640a02a3fb88d3dbdb224e3becd400d
+Patch0:		%{name}-poppler.patch
 URL:		http://www.linuxfoundation.org/collaborate/workgroups/openprinting
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -18,6 +19,7 @@ BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libtool
 BuildRequires:	pkg-config
+BuildRequires:	poppler-devel
 BuildRequires:	qpdf-devel
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	cups
@@ -53,6 +55,7 @@ libraries.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__libtoolize}
