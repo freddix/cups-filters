@@ -1,11 +1,11 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
-Version:	1.0.35
+Version:	1.0.36
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
-# Source0-md5:	26f150f1e9ce1f7b0f38ae4ebb01e23d
+# Source0-md5:	c48a991ac408583d33e1d1e84881c470
 URL:		http://www.linuxfoundation.org/collaborate/workgroups/openprinting
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -64,7 +64,9 @@ libraries.
 %{__autoheader}
 %{__automake}
 %configure \
-	--disable-static			\
+	--disable-silent-rules	\
+	--disable-static	\
+	--with-rcdir=no 	\
 	--with-fontdir=/fontconfig/conf.avail	\
 	--with-test-font-path=%{_fontsdir}/TTF/DejaVuSans.ttf
 %{__make}
@@ -92,6 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_prefix}/lib/cups/filter/bannertopdf
 %attr(755,root,root) %{_prefix}/lib/cups/filter/commandtoescpx
 %attr(755,root,root) %{_prefix}/lib/cups/filter/commandtopclx
+%attr(755,root,root) %{_prefix}/lib/cups/filter/gstopxl
+%attr(755,root,root) %{_prefix}/lib/cups/filter/gstoraster
 %attr(755,root,root) %{_prefix}/lib/cups/filter/imagetopdf
 %attr(755,root,root) %{_prefix}/lib/cups/filter/imagetops
 %attr(755,root,root) %{_prefix}/lib/cups/filter/imagetoraster
