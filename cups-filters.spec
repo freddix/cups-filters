@@ -1,7 +1,7 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
 Version:	1.0.36
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
@@ -21,6 +21,7 @@ BuildRequires:	pkg-config
 BuildRequires:	poppler-devel
 BuildRequires:	qpdf-devel
 Requires:	%{name}-libs = %{version}-%{release}
+Obsoletes:	ghostscript-cups
 Requires:	cups
 Requires:	fontconfig
 Requires:	fonts-TTF-DejaVu
