@@ -1,11 +1,11 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
-Version:	1.0.40
+Version:	1.0.41
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
-# Source0-md5:	50936e556a2787a85cb14dd859e8f410
+# Source0-md5:	9065084c7601ce1721cd6f34ca0a4337
 URL:		http://www.linuxfoundation.org/collaborate/workgroups/openprinting
 BuildRequires:	autoconf
 BuildRequires:	automake
