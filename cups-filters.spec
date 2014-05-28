@@ -1,7 +1,7 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
 Version:	1.0.53
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Printing
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
