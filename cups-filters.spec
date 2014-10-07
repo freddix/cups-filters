@@ -1,11 +1,11 @@
 Summary:	OpenPrinting CUPS Filters
 Name:		cups-filters
-Version:	1.0.53
-Release:	2
+Version:	1.0.60
+Release:	1
 License:	GPL
 Group:		Applications/Printing
 Source0:	http://www.openprinting.org/download/cups-filters/%{name}-%{version}.tar.gz
-# Source0-md5:	64825cb330c2ef6dcb29215158e701bb
+# Source0-md5:	a59a85c2c3218017ecf7d0f07cad659f
 URL:		http://www.linuxfoundation.org/collaborate/workgroups/openprinting
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -138,6 +138,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_prefix}/lib/cups/filter/pstopdf
 %attr(755,root,root) %{_prefix}/lib/cups/filter/rastertoescpx
 %attr(755,root,root) %{_prefix}/lib/cups/filter/rastertopclx
+%attr(755,root,root) %{_prefix}/lib/cups/filter/rastertopdf
 %attr(755,root,root) %{_prefix}/lib/cups/filter/textonly
 %attr(755,root,root) %{_prefix}/lib/cups/filter/texttopdf
 %attr(755,root,root) %{_prefix}/lib/cups/filter/texttops
@@ -146,6 +147,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/cups/banners
 %{_datadir}/cups/banners/classified
 %{_datadir}/cups/banners/confidential
+%{_datadir}/cups/banners/form
 %{_datadir}/cups/banners/secret
 %{_datadir}/cups/banners/standard
 %{_datadir}/cups/banners/topsecret
@@ -155,9 +157,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/cups/charsets/pdf.utf-8.heavy
 %{_datadir}/cups/charsets/pdf.utf-8.simple
 
+%{_datadir}/cups/data/classified.pdf
+%{_datadir}/cups/data/confidential.pdf
 %{_datadir}/cups/data/default-testpage.pdf
 %{_datadir}/cups/data/default.pdf
+%{_datadir}/cups/data/form_english.pdf
+%{_datadir}/cups/data/secret.pdf
+%{_datadir}/cups/data/standard.pdf
 %{_datadir}/cups/data/testprint
+%{_datadir}/cups/data/topsecret.pdf
+%{_datadir}/cups/data/unclassified.pdf
 
 %{_datadir}/cups/drv/cupsfilters.drv
 
